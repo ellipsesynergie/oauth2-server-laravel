@@ -20,11 +20,11 @@
         }
     ],
     "require": {
-        "php": ">=7.1.3",
-        "illuminate/database": "^5.5",
-        "illuminate/console": "^5.5",
-        "illuminate/http": "^5.5",
-        "illuminate/config": "^5.5",
+        "php": "^7.4|^8.0",
+        "illuminate/database": "^6.0",
+        "illuminate/console": "^6.0",
+        "illuminate/http": "^6.0",
+        "illuminate/config": "^6.0",
         "league/oauth2-server": "4.2"
     },
     "require-dev": {
@@ -49,11 +49,5 @@
             "tests/AbstractTestCase.php",
             "tests/integration/AbstractDBTestCase.php"
         ]
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "5.4-dev"
-        }
-    },
-    "minimum-stability": "dev"
+    }
 }
