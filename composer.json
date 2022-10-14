@@ -53,5 +53,9 @@
     "scripts": {
         "test:unit": "phpunit --colors=always",
         "test:spec": "phpspec run"
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
     }
 }
