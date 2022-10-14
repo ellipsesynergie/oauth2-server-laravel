@@ -49,5 +49,9 @@
             "tests/AbstractTestCase.php",
             "tests/integration/AbstractDBTestCase.php"
         ]
+    },
+    "scripts": {
+        "test:unit": "phpunit --colors=always",
+        "test:spec": "phpspec run"
     }
 }
