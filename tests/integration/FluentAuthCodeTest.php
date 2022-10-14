@@ -31,7 +31,7 @@ class FluentAuthCodeTest extends AbstractDBTestCase
 
         $this->assertInstanceOf('League\OAuth2\Server\Entity\AuthCodeEntity', $result);
         $this->assertEquals('totallyanauthcode1', $result->getId());
-        $this->assertInternalType('int', $result->getExpireTime());
+        $this->assertIsInt($result->getExpireTime());
     }
 
     public function test_it_returns_null_with_an_invalid_code()
@@ -76,10 +76,10 @@ class FluentAuthCodeTest extends AbstractDBTestCase
 
         $result2 = $repo->getScopes($code);
 
-        $this->assertInternalType('array', $result1);
+        $this->assertIsArray($result1);
         $this->assertEquals(0, count($result1));
 
-        $this->assertInternalType('array', $result2);
+        $this->assertIsArray($result2);
         $this->assertEquals(2, count($result2));
 
         $first = $result2[0];
@@ -98,7 +98,7 @@ class FluentAuthCodeTest extends AbstractDBTestCase
 
         $this->assertInstanceOf('League\OAuth2\Server\Entity\AuthCodeEntity', $result);
         $this->assertEquals('newauthcode', $result->getId());
-        $this->assertInternalType('int', $result->getExpireTime());
+        $this->assertIsInt($result->getExpireTime());
         $this->assertEquals($time, $result->getExpireTime());
         $this->assertEquals('http://example1.com', $result->getRedirectUri());
     }

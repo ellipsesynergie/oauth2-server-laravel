@@ -63,7 +63,7 @@ class FluentSessionTest extends AbstractDBTestCase
 
         $result = $repo->getScopes($session);
 
-        $this->assertInternalType('array', $result);
+        $this->assertIsArray($result);
         $this->assertEquals(2, count($result));
         $first = $result[0];
         $this->assertInstanceOf('League\OAuth2\Server\Entity\ScopeEntity', $first);

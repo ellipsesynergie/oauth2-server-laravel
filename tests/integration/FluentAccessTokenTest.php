@@ -31,7 +31,7 @@ class FluentAccessTokenTest extends AbstractDBTestCase
 
         $this->assertInstanceOf('League\OAuth2\Server\Entity\AccessTokenEntity', $result);
         $this->assertEquals('totallyanaccesstoken1', $result->getId());
-        $this->assertInternalType('int', $result->getExpireTime());
+        $this->assertIsInt($result->getExpireTime());
     }
 
     public function test_it_returns_null_with_an_invalid_token()
@@ -54,7 +54,7 @@ class FluentAccessTokenTest extends AbstractDBTestCase
 
         $this->assertInstanceOf('League\OAuth2\Server\Entity\AccessTokenEntity', $result);
         $this->assertEquals('totallyanaccesstoken1', $result->getId());
-        $this->assertInternalType('int', $result->getExpireTime());
+        $this->assertIsInt($result->getExpireTime());
     }
 
     public function test_it_returns_null_with_an_invalid_refresh_token()
@@ -102,10 +102,10 @@ class FluentAccessTokenTest extends AbstractDBTestCase
 
         $result2 = $repo->getScopes($token);
 
-        $this->assertInternalType('array', $result1);
+        $this->assertIsArray($result1);
         $this->assertEquals(0, count($result1));
 
-        $this->assertInternalType('array', $result2);
+        $this->assertIsArray($result2);
         $this->assertEquals(2, count($result2));
 
         $first = $result2[0];
@@ -123,7 +123,7 @@ class FluentAccessTokenTest extends AbstractDBTestCase
 
         $this->assertInstanceOf('League\OAuth2\Server\Entity\AccessTokenEntity', $result);
         $this->assertEquals('accesstoken', $result->getId());
-        $this->assertInternalType('int', $result->getExpireTime());
+        $this->assertIsInt($result->getExpireTime());
         $this->assertEquals($time, $result->getExpireTime());
     }
 }
