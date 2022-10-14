@@ -31,7 +31,7 @@ class FluentRefreshTokenTest extends AbstractDBTestCase
 
         $this->assertInstanceOf('League\OAuth2\Server\Entity\RefreshTokenEntity', $result);
         $this->assertEquals('totallyarefreshtoken1', $result->getId());
-        $this->assertInternalType('int', $result->getExpireTime());
+        $this->assertIsInt($result->getExpireTime());
     }
 
     public function test_it_returns_null_with_an_invalid_token()
@@ -65,7 +65,7 @@ class FluentRefreshTokenTest extends AbstractDBTestCase
 
         $this->assertInstanceOf('League\OAuth2\Server\Entity\RefreshTokenEntity', $result);
         $this->assertEquals('newrefreshtoken', $result->getId());
-        $this->assertInternalType('int', $result->getExpireTime());
+        $this->assertIsInt($result->getExpireTime());
         $this->assertEquals($time, $result->getExpireTime());
     }
 }

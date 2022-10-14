@@ -14,7 +14,6 @@ namespace LucaDegasperi\OAuth2Server;
 use Illuminate\Contracts\Container\Container as Application;
 use Illuminate\Foundation\Application as LaravelApplication;
 use Illuminate\Support\ServiceProvider;
-use Laravel\Lumen\Application as LumenApplication;
 use League\OAuth2\Server\AuthorizationServer;
 use League\OAuth2\Server\ResourceServer;
 use League\OAuth2\Server\Storage\AccessTokenInterface;
@@ -59,8 +58,6 @@ class OAuth2ServerServiceProvider extends ServiceProvider
 
         if ($app instanceof LaravelApplication && $app->runningInConsole()) {
             $this->publishes([$source => config_path('oauth2.php')]);
-        } elseif ($app instanceof LumenApplication) {
-            $app->configure('oauth2');
         }
 
         $this->mergeConfigFrom($source, 'oauth2');

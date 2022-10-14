@@ -18,17 +18,6 @@ abstract class AbstractTestCase extends OrchestraTestCase
         parent::setUp();
     }
 
-    /**
-     * Get base path.
-     *
-     * @return string
-     */
-    protected function getBasePath()
-    {
-        // reset base path to point to our package's src directory
-        return __DIR__.'/../vendor/orchestra/testbench/fixture';
-    }
-
     protected function getPackageProviders($app)
     {
         return [

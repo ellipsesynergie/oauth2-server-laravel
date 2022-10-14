@@ -12,6 +12,7 @@
 namespace LucaDegasperi\OAuth2Server\Storage;
 
 use Carbon\Carbon;
+use League\OAuth2\Server\Entity\AbstractTokenEntity;
 use League\OAuth2\Server\Entity\AccessTokenEntity;
 use League\OAuth2\Server\Entity\ScopeEntity;
 use League\OAuth2\Server\Storage\AccessTokenInterface;
@@ -44,25 +45,6 @@ class FluentAccessToken extends AbstractFluentAdapter implements AccessTokenInte
                ->setId($result->id)
                ->setExpireTime((int) $result->expire_time);
     }
-
-    /*
-    public function getByRefreshToken(RefreshTokenEntity $refreshToken)
-    {
-        $result = $this->getConnection()->table('oauth_access_tokens')
-                ->select('oauth_access_tokens.*')
-                ->join('oauth_refresh_tokens', 'oauth_access_tokens.id', '=', 'oauth_refresh_tokens.access_token_id')
-                ->where('oauth_refresh_tokens.id', $refreshToken->getId())
-                ->first();
-
-        if (is_null($result)) {
-            return null;
-        }
-
-        return (new AccessTokenEntity($this->getServer()))
-               ->setId($result->id)
-               ->setExpireTime((int)$result->expire_time);
-    }
-    */
 
     /**
      * Get the scopes for an access token.
