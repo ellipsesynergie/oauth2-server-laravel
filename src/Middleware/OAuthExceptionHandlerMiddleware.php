@@ -46,7 +46,7 @@ class OAuthExceptionHandlerMiddleware
                 'error_description' => $e->getMessage(),
             ];
 
-            return new JsonResponse($data, $e->httpStatusCode, $e->getHttpHeaders());
+            return new JsonResponse($data, $e->httpStatusCode);
         }
     }
 }
