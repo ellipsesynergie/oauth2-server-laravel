@@ -21,10 +21,10 @@
     ],
     "require": {
         "php": "^8.0",
-        "illuminate/database": "^8.0",
-        "illuminate/console": "^8.0",
-        "illuminate/http": "^8.0",
-        "illuminate/config": "^8.0",
+        "illuminate/database": "^9.0",
+        "illuminate/console": "^9.0",
+        "illuminate/http": "^9.0",
+        "illuminate/config": "^9.0",
         "league/oauth2-server": "dev-4.5.x-add-L9-php8-support"
     },
     "require-dev": {
