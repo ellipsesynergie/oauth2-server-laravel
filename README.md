@@ -1,6 +1,6 @@
 # DO NOT USE THIS
 
-## This is a fork from https://github.com/ellipsesynergie/oauth2-server-laravel to support Laravel 9 / php 8
+## This is a fork from https://github.com/ellipsesynergie/oauth2-server-laravel to support Laravel 9 / php 8.
 
 ## Running Tests
 
