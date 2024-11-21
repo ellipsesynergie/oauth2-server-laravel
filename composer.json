@@ -28,7 +28,7 @@
         "league/oauth2-server": "dev-feature/11.0.0-add-laravel-11-support"
     },
     "require-dev": {
-        "orchestra/testbench": "^8.0",
+        "orchestra/testbench": "^9.0",
         "phpunit/phpunit": "^9.0",
         "phpspec/phpspec": "^7.3",
         "mockery/mockery": "~1.0"
